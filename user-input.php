@@ -1,5 +1,5 @@
 <?php
-$obj = json_decode(file_get_contents("num.json"));
+$obj = json_decode(file_get_contents("merge.json"));
 ?>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <?php foreach ($obj as $idx => $list) { ?>

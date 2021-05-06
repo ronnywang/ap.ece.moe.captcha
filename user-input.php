@@ -1,5 +1,6 @@
 <?php
 $obj = json_decode(file_get_contents("merge.json"));
+$ans = json_decode(file_get_contents("ans.json"));
 ?>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <?php foreach ($obj as $idx => $list) { ?>
@@ -16,7 +17,7 @@ $obj = json_decode(file_get_contents("merge.json"));
     </tr>
     <?php } ?>
 </table>
-<input type="number" class="number-input" data-id="<?= $idx ?>">
+<input type="number" class="number-input" data-id="<?= $idx ?>" value="<?= $ans[$idx][1] ?>">
 <?php } ?>
 <textarea id="output"></textarea>
 <script>
